@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Pro | 7 Subtest UTBK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: { colors: { sage: '#8fa998', natural: { 50: '#f8f9fa', 900: '#1a1d20', 800: '#212529' } } }
+            }
+        }
+    </script>
+    <style>
+        .active-tab { color: #8fa998; border-bottom: 2px solid #8fa998; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .subtest-card:hover { transform: translateY(-5px); transition: all 0.3s; }
+    </style>
+</head>
+<body class="bg-natural-50 text-natural-800 dark:bg-natural-900 dark:text-natural-100 min-h-screen">
+
+    <nav class="p-6 flex justify-between items-center max-w-5xl mx-auto sticky top-0 bg-natural-50/80 dark:bg-natural-900/80 backdrop-blur-md z-50">
+        <div class="flex items-center gap-2">
+            <i class="fas fa-book-open text-sage text-2xl"></i>
+            <span class="font-bold tracking-tight text-xl">Lumina</span>
+        </div>
+        <div class="flex items-center gap-4">
+            <span class="text-xs font-bold text-orange-400"><i class="fas fa-fire"></i> 7 Day Streak</span>
+            <button onclick="document.documentElement.classList.toggle('dark')" class="w-8 h-8 rounded-full border border-black/5 flex items-center justify-center">
+                <i class="fas fa-moon text-sage text-sm"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 pb-32">
+        
+        <div id="home" class="tab-content active">
+            <header class="mb-8">
+                <h2 class="text-2xl font-light">Materi <span class="font-bold">7 Subtes SNBT</span></h2>
+                <p class="text-sm text-slate-500">Mulai dari konsep fundamental hingga mastery.</p>
+            </header>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                <div class="subtest-card p-4 bg-white dark:bg-natural-800 rounded-2xl shadow-sm border border-black/5">
+                    <div class="flex justify-between items-center mb-3">
+                        <i class="fas fa-brain text-sage"></i>
+                        <span class="text-[10px] bg-sage/10 text-sage px-2 py-0.5 rounded">Fundamental</span>
+                    </div>
+                    <h4 class="font-bold text-sm">Penalaran Umum (PU)</h4>
+                    <p class="text-[10px] text-slate-400 mt-1">Logika, Pola Bilangan, Analitik.</p>
+                </div>
+                <div class="subtest-card p-4 bg-white dark:bg-natural-800 rounded-2xl shadow-sm border border-black/5">
+                    <div class="flex justify-between items-center mb-3">
+                        <i class="fas fa-book text-blue-300"></i>
+                        <span class="text-[10px] bg-blue-50 text-blue-400 px-2 py-0.5 rounded">Core</span>
+                    </div>
+                    <h4 class="font-bold text-sm">Pengetahuan & Pemahaman Umum (PPU)</h4>
+                    <p class="text-[10px] text-slate-400 mt-1">Sinonim, Antonim, Konteks Kata.</p>
+                </div>
+                <div class="subtest-card p-4 bg-white dark:bg-natural-800 rounded-2xl shadow-sm border border-black/5">
+                    <div class="flex justify-between items-center mb-3">
+                        <i class="fas fa-pen-fancy text-orange-300"></i>
+                        <span class="text-[10px] bg-orange-50 text-orange-400 px-2 py-0.5 rounded">Writing</span>
+                    </div>
+                    <h4 class="font-bold text-sm">Pemahaman Bacaan & Menulis (PBM)</h4>
+                    <p class="text-[10px] text-slate-400 mt-1">Ejaan, Konjungsi, Kepaduan Teks.</p>
+                </div>
+                <div class="subtest-card p-4 bg-white dark:bg-natural-800 rounded-2xl shadow-sm border border-black/5">
+                    <div class="flex justify-between items-center mb-3">
+                        <i class="fas fa-calculator text-red-300"></i>
+                        <span class="text-[10px] bg-red-50 text-red-400 px-2 py-0.5 rounded">Math</span>
+                    </div>
+                    <h4 class="font-bold text-sm">Pengetahuan Kuantitatif (PK)</h4>
+                    <p class="text-[10px] text-slate-400 mt-1">Aljabar, Geometri, Aritmatika.</p>
+                </div>
+                <div class="subtest-card p-4 bg-white dark:bg-natural-800 rounded-2xl shadow-sm border border-black/5">
+                    <div class="flex justify-between items-center mb-3">
+                        <i class="fas fa-globe text-indigo-300"></i>
+                        <span class="text-[10px] bg-indigo-50 text-indigo-400 px-2 py-0.5 rounded">English</span>
+                    </div>
+                    <h4 class="font-bold text-sm">Literasi Bahasa Inggris (LBI)</h4>
+                    <p class="text-[10px] text-slate-400 mt-1">Reading Comprehension, Inference.</p>
+                </div>
+                <div class="subtest-card p-4 bg-white dark:bg-natural-800 rounded-2xl shadow-sm border border-black/5">
+                    <div class="flex justify-between items-center mb-3">
+                        <i class="fas fa-language text-emerald-300"></i>
+                        <span class="text-[10px] bg-emerald-50 text-emerald-400 px-2 py-0.5 rounded">Indonesia</span>
+                    </div>
+                    <h4 class="font-bold text-sm">Literasi Bahasa Indonesia (LBE)</h4>
+                    <p class="text-[10px] text-slate-400 mt-1">Analisis Teks Lintas Bidang.</p>
+                </div>
+                <div class="subtest-card p-4 bg-white dark:bg-natural-800 rounded-2xl shadow-sm border border-black/5 sm:col-span-2">
+                    <div class="flex justify-between items-center mb-3">
+                        <i class="fas fa-square-root-variable text-purple-300"></i>
+                        <span class="text-[10px] bg-purple-50 text-purple-400 px-2 py-0.5 rounded">Logic Math</span>
+                    </div>
+                    <h4 class="font-bold text-sm">Penalaran Matematika (PM)</h4>
+                    <p class="text-[10px] text-slate-400 mt-1">Penyelesaian Masalah Berbasis Data & Logika Matematika.</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-natural-800 p-8 rounded-[2rem] shadow-sm text-center border border-black/5">
+                <span class="text-[10px] uppercase tracking-[0.2em] text-slate-400">Custom Drilling Timer</span>
+                <div id="display-timer" class="text-6xl font-light my-6 tracking-tighter text-sage">25:00</div>
+                <div class="flex gap-2 justify-center mb-6">
+                    <button onclick="setTime(15)" class="text-[10px] border border-sage px-3 py-1 rounded-full text-sage">15m</button>
+                    <button onclick="setTime(25)" class="text-[10px] border border-sage px-3 py-1 rounded-full text-sage bg-sage text-white">25m</button>
+                    <button onclick="setTime(60)" class="text-[10px] border border-sage px-3 py-1 rounded-full text-sage">60m</button>
+                </div>
+                <button onclick="startTimer()" id="btn-timer" class="w-full max-w-xs py-4 bg-sage text-white rounded-2xl font-bold shadow-lg shadow-sage/20 transition-all active:scale-95">Mulai Latihan</button>
+            </div>
+        </div>
+
+        <div id="stats" class="tab-content">
+            <h2 class="text-2xl font-bold mb-6">Analisis Fakultas</h2>
+            <div class="space-y-4">
+                <div class="p-6 bg-white dark:bg-natural-800 rounded-3xl border border-black/5">
+                    <select class="w-full bg-natural-50 dark:bg-natural-900 p-3 rounded-xl mb-4 text-sm outline-none">
+                        <option>Kedokteran - Universitas Indonesia</option>
+                        <option>Teknik Informatika - ITB</option>
+                        <option>Hukum - UGM</option>
+                    </select>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-natural-50 dark:bg-natural-900 p-4 rounded-2xl text-center">
+                            <p class="text-[10px] text-slate-400 uppercase">Avg. Score</p>
+                            <p class="text-xl font-bold text-sage">742.0</p>
+                        </div>
+                        <div class="bg-natural-50 dark:bg-natural-900 p-4 rounded-2xl text-center">
+                            <p class="text-[10px] text-slate-400 uppercase">Peluang</p>
+                            <p class="text-xl font-bold text-emerald-400">12.5%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="english" class="tab-content">
+            <h2 class="text-2xl font-bold mb-6">English Mastery</h2>
+            <div class="bg-white dark:bg-natural-800 p-8 rounded-3xl text-center shadow-sm border border-black/5 mb-6">
+                <p class="text-xs text-sage mb-2 font-bold uppercase tracking-widest">Vocabulary Flashcard</p>
+                <h3 class="text-4xl font-serif italic mb-4">"Superfluous"</h3>
+                <p class="text-sm text-slate-500">More than is needed; unnecessary.</p>
+            </div>
+            <div class="p-4 bg-sage/10 rounded-2xl border border-sage/20 flex items-center justify-between">
+                <span class="text-sm">Practice Pronunciation</span>
+                <i class="fas fa-play-circle text-sage text-xl"></i>
+            </div>
+        </div>
+
+        <div id="ai" class="tab-content">
+            <div class="flex flex-col h-[50vh] justify-between">
+                <div class="space-y-4 overflow-y-auto pr-2">
+                    <div class="bg-white dark:bg-natural-800 p-4 rounded-2xl rounded-tl-none shadow-sm max-w-[80%]">
+                        <p class="text-sm">Halo! Aku Sensei. Ada soal UTBK yang buat kamu bingung?</p>
+                    </div>
+                </div>
+                <div class="flex gap-2 pt-4">
+                    <input type="text" placeholder="Tanya soal matematika atau literasi..." class="flex-1 p-4 bg-white dark:bg-natural-800 rounded-2xl outline-none border border-black/5 text-sm">
+                    <button class="w-12 h-12 bg-sage text-white rounded-2xl flex items-center justify-center"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md bg-white/90 dark:bg-natural-800/90 backdrop-blur-xl p-3 rounded-[2.5rem] shadow-2xl flex justify-around items-center border border-black/5 z-50">
+        <button onclick="openTab('home', this)" class="flex flex-col items-center gap-1 active-tab">
+            <i class="fas fa-home text-sm"></i><span class="text-[8px] font-bold uppercase">Home</span>
+        </button>
+        <button onclick="openTab('stats', this)" class="flex flex-col items-center gap-1 text-slate-400">
+            <i class="fas fa-chart-pie text-sm"></i><span class="text-[8px] font-bold uppercase">Stats</span>
+        </button>
+        <button onclick="openTab('english', this)" class="flex flex-col items-center gap-1 text-slate-400">
+            <i class="fas fa-language text-sm"></i><span class="text-[8px] font-bold uppercase">English</span>
+        </button>
+        <button onclick="openTab('ai', this)" class="flex flex-col items-center gap-1 text-slate-400">
+            <i class="fas fa-robot text-sm"></i><span class="text-[8px] font-bold uppercase">Sensei</span>
+        </button>
+    </div>
+
+    <script>
+        function openTab(tabName, el) {
+            const contents = document.getElementsByClassName("tab-content");
+            for (let content of contents) { content.classList.remove("active"); }
+            const buttons = el.parentElement.getElementsByTagName("button");
+            for (let btn of buttons) { btn.classList.add("text-slate-400"); btn.classList.remove("active-tab"); }
+            document.getElementById(tabName).classList.add("active");
+            el.classList.add("active-tab");
+            el.classList.remove("text-slate-400");
+        }
+
+        let timer;
+        let timeLeft = 1500;
+        function setTime(m) { 
+            timeLeft = m * 60; 
+            updateDisplay(); 
+        }
+        function updateDisplay() {
+            const mins = Math.floor(timeLeft / 60);
+            const secs = timeLeft % 60;
+            document.getElementById('display-timer').textContent = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+        function startTimer() {
+            const btn = document.getElementById('btn-timer');
+            if (btn.textContent === 'Mulai Latihan') {
+                btn.textContent = 'Pause';
+                timer = setInterval(() => {
+                    if (timeLeft <= 0) clearInterval(timer);
+                    else { timeLeft--; updateDisplay(); }
+                }, 1000);
+            } else {
+                btn.textContent = 'Mulai Latihan';
+                clearInterval(timer);
+            }
+        }
+    </script>
+</body>
+</html>
